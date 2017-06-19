@@ -1,0 +1,67 @@
+﻿<controls:MetroWindow x:Class="BurAz.View.MainView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        GlowBrush="{DynamicResource AccentColorBrush}"
+        TitleCharacterCasing="Normal"
+        Title="Бурятская азбука" Height="450" Width="725"
+        ResizeMode="CanResizeWithGrip"
+        DataContext="{Binding Source={StaticResource Locator}, Path=MainView}">
+    <controls:MetroWindow.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ABCButtons" TargetType="Button" BasedOn="{StaticResource MaterialDesignFlatButton}">
+                <Setter Property="FontSize" Value="14" />
+                <Setter Property="Margin" Value="0 10" />
+                <Setter Property="FontFamily" Value="Arial Unicode MS"/>
+            </Style>
+        </ResourceDictionary>
+    </controls:MetroWindow.Resources>
+    <Grid>
+        <WrapPanel VerticalAlignment="Top"
+                   HorizontalAlignment="Stretch"
+                   Orientation="Horizontal"
+                   Margin="10 10 0 0" Height="300">
+            <Button Content="А а" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Б б" Style="{StaticResource ABCButtons}"/>
+            <Button Content="В в" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Г г" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Д д" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Е е" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Ё ё" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Ж ж" Style="{StaticResource ABCButtons}"/>
+            <Button Content="З з" Style="{StaticResource ABCButtons}"/>
+            <Button Content="И и" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Й й" Style="{StaticResource ABCButtons}"/>
+            <Button Content="К к" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Л л" Style="{StaticResource ABCButtons}"/>
+            <Button Content="М м" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Н н" Style="{StaticResource ABCButtons}"/>
+            <Button Content="О о" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Ө ө" Style="{StaticResource ABCButtons}"/>
+            <Button Content="П п" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Р р" Style="{StaticResource ABCButtons}"/>
+            <Button Content="С с" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Т т" Style="{StaticResource ABCButtons}"/>
+            <Button Content="У у" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Y y" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Ф ф" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Х х" Style="{StaticResource ABCButtons}"/>
+            <Button Content="H h" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Ц ц" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Ч ч" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Ш ш" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Щ щ" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Ъ ъ" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Ы ы" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Ь ь" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Э э" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Ю ю" Style="{StaticResource ABCButtons}"/>
+            <Button Content="Я я" Style="{StaticResource ABCButtons}" RenderTransformOrigin="1.315,0.391"/>
+        </WrapPanel>
+    </Grid>
+</controls:MetroWindow>
+
