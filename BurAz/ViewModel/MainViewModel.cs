@@ -1,5 +1,6 @@
 using System;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Threading;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
@@ -25,6 +26,8 @@ namespace BurAz.ViewModel
             }
         }
 
+        private string[] Letters = { "À", "Á", };
+
         private const int time = 10;
 
         DispatcherTimer _dispTimer;
@@ -38,6 +41,13 @@ namespace BurAz.ViewModel
         }
 
         public RelayCommand ABCStart => new RelayCommand(() => _dispTimer.Start());
+
+        public RelayCommand CheckLetter(RoutedEventArgs e) => new RelayCommand(() =>
+        {
+            string text = (string)((Button)e.OriginalSource).Content;
+            _dispTimer.Stop();
+            ABCTimer = text;
+        });
 
         public string ABCLetter { get; set; }
 
