@@ -17,11 +17,13 @@
                 <Setter Property="FontSize" Value="14" />
                 <Setter Property="Margin" Value="0 10" />
                 <Setter Property="FontFamily" Value="Arial Unicode MS"/>
+                <Setter Property="Command" Value="{Binding CheckLetter}"/>
             </Style>
         </ResourceDictionary>
     </controls:MetroWindow.Resources>
     <Grid>
-        <WrapPanel VerticalAlignment="Top"
+        <StackPanel Orientation="Vertical">
+            <WrapPanel VerticalAlignment="Top"
                    HorizontalAlignment="Stretch"
                    Orientation="Horizontal"
                    Margin="10 10 0 0">
@@ -60,6 +62,58 @@
             <Button Content="Ю ю" Style="{StaticResource ABCButtons}"/>
             <Button Content="Я я" Style="{StaticResource ABCButtons}"/>
         </WrapPanel>
+            <StackPanel
+            Orientation="Horizontal"
+            HorizontalAlignment="Right">
+                <TextBlock
+                    Style="{StaticResource MaterialDesignBody1TextBlock}"
+                    FontSize="24"
+                    Margin="0 20 20 0"
+                    Text="Время:">
+                </TextBlock>
+                <TextBlock
+                    Style="{StaticResource MaterialDesignBody1TextBlock}"
+                    FontSize="24"
+                    Margin="0 20 20 0"
+                    Text="{Binding ABCTimer}">
+                </TextBlock>
+                <TextBlock
+                    Style="{StaticResource MaterialDesignBody1TextBlock}"
+                    FontSize="24"
+                    Foreground="Brown"
+                    Margin="0 20 20 0"
+                    Text="{Binding ABCLetter}"/>
+                <TextBlock
+                    Style="{StaticResource MaterialDesignBody1TextBlock}"
+                    FontSize="24"
+                    Margin="0 20 20 0"
+                    Text="Верно:"/>
+                <TextBlock
+                    Style="{StaticResource MaterialDesignBody1TextBlock}"
+                    FontSize="24"
+                    Margin="0 20 20 0"
+                    Text="{Binding ABCTrue}"/>
+                <TextBlock
+                    Style="{StaticResource MaterialDesignBody1TextBlock}"
+                    FontSize="24"
+                    Margin="0 20 20 0"
+                    Text="Ошибок:"/>
+                <TextBlock
+                    Style="{StaticResource MaterialDesignBody1TextBlock}"
+                    FontSize="24"
+                    Margin="0 20 20 0"
+                    Text="{Binding ABCFalse}"/>
+                <Button
+                Content="Начать"
+                Style="{StaticResource MaterialDesignFlatButton}"
+                FontSize="24"
+                Height="40"
+                Margin="0 15 20 0"
+                FontFamily="Times New Roman"
+                FontWeight="Bold"
+                Command="{Binding ABCStart}"/>
+        </StackPanel>
+        </StackPanel>
     </Grid>
 </controls:MetroWindow>
 
