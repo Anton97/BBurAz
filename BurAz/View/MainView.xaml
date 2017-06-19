@@ -9,6 +9,7 @@
         GlowBrush="{DynamicResource AccentColorBrush}"
         TitleCharacterCasing="Normal"
         Title="Бурятская азбука" Height="450" Width="725"
+        ResizeMode="CanResizeWithGrip"
         DataContext="{Binding Source={StaticResource Locator}, Path=MainView}">
     <controls:MetroWindow.Resources>
         <ResourceDictionary>
